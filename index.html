@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#faf7ff">
+  <title>The House Menu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <button id="homeBtn" class="brand" type="button">The House <span>Menu</span></button>
+      <button id="addBtn" class="add-btn" type="button" aria-label="Add recipe">+</button>
+    </header>
+
+    <p id="notice" class="notice" hidden></p>
+
+    <main id="homeView">
+      <div class="search-wrap">
+        <span aria-hidden="true">⌕</span>
+        <input id="searchInput" type="search" placeholder="Search recipes, ingredients, tags…" autocomplete="off">
+      </div>
+      <div class="toolbar">
+        <span id="recipeCount"></span>
+        <button id="refreshBtn" class="text-btn" type="button">Refresh</button>
+        <button id="backupBtn" class="text-btn" type="button">Export</button>
+      </div>
+      <div id="chapters"></div>
+    </main>
+
+    <main id="detailView" hidden>
+      <button id="backBtn" class="back" type="button">← All recipes</button>
+      <div class="hero" id="detailHero">
+        <div class="hero-placeholder">✿</div>
+        <button id="menuBtn" class="menu-btn" type="button" aria-label="Recipe options">•••</button>
+        <div id="recipeMenu" class="popup" hidden>
+          <button id="editBtn" type="button">Edit recipe</button>
+          <button id="deleteBtn" class="danger" type="button">Delete recipe</button>
+        </div>
+      </div>
+      <div class="detail-body">
+        <div id="detailCategory" class="eyebrow"></div>
+        <h1 id="detailTitle"></h1>
+        <div class="ingredient-heading">
+          <h2>Ingredients <span id="ingredientProgress"></span></h2>
+          <button id="uncheckBtn" class="text-btn" type="button">↺ Uncheck all</button>
+        </div>
+        <div id="ingredientList"></div>
+        <section id="methodSection">
+          <h2>Instructions</h2>
+          <div id="methodText"></div>
+        </section>
+      </div>
+    </main>
+
+    <main id="editorView" hidden>
+      <button id="cancelBtn" class="back" type="button">← Back</button>
+      <h1 id="editorTitle">New recipe</h1>
+      <form id="recipeForm">
+        <label class="field">Recipe photo <span class="optional">optional</span>
+          <div class="photo-picker" id="photoPicker">
+            <img id="photoPreview" alt="Recipe preview" hidden>
+            <span id="photoPrompt">＋ Choose a photo</span>
+          </div>
+          <input id="photoInput" type="file" accept="image/*">
+        </label>
+        <label class="field">Recipe title
+          <input id="titleInput" type="text" maxlength="120" required placeholder="Recipe name">
+        </label>
+        <label class="field">Chapter
+          <select id="categoryInput">
+            <option>Appetizers & Snacks</option><option>Mains</option><option>Sides</option>
+            <option>Soups & Stews</option><option>Desserts</option><option>Drinks</option>
+          </select>
+        </label>
+        <div class="ingredient-heading"><h2>Ingredient sections</h2></div>
+        <div id="sectionEditors"></div>
+        <button id="addSectionBtn" class="add-section" type="button">+ Add section</button>
+        <label class="field">Instructions <span class="optional">optional</span>
+          <textarea id="methodInput" rows="7" placeholder="How to make it…"></textarea>
+        </label>
+        <label class="field">Search tags <span class="optional">comma separated, hidden</span>
+          <input id="tagsInput" type="text" placeholder="korean, spicy, quick">
+        </label>
+        <button id="saveBtn" class="save-btn" type="submit">Save recipe</button>
+      </form>
+    </main>
+  </div>
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
