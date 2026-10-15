@@ -2,7 +2,7 @@
   --paper: #faf7ff;
   --white: #fff;
   --lavender: #efe6fb;
-  --plum: #35184e;
+  --plum: #4E2E79;
   --muted: #796c83;
   --pink: #f23498;
   --line: #e9e0ed;
@@ -14,7 +14,7 @@ button, input, textarea, select { font: inherit; }
 button { cursor: pointer; }
 .app { max-width: 600px; min-height: 100vh; margin: auto; padding: 0 18px 60px; background: var(--white); }
 .topbar { height: 74px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--line); margin-bottom: 22px; }
-.brand { padding: 0; border: 0; background: transparent; color: var(--plum); font: 700 25px 'Playfair Display', serif; }
+.brand { padding: 0; border: 0; background: transparent; color: var(--plum); font: 700 25px 'Prompt', sans-serif; }
 .brand span { color: var(--pink); }
 .add-btn { border: 0; background: var(--plum); color: white; width: 42px; height: 42px; border-radius: 50%; font-size: 30px; line-height: 1; }
 .search-wrap { display: flex; align-items: center; gap: 10px; padding: 0 14px; background: var(--paper); border: 1px solid var(--line); border-radius: 12px; }
@@ -24,7 +24,7 @@ button { cursor: pointer; }
 .toolbar span { margin-right: auto; }
 .text-btn, .back { border: 0; padding: 6px 0; background: transparent; color: var(--pink); font-weight: 700; }
 .chapter { margin: 0 0 30px; }
-.chapter h2, .detail-body h2, #editorTitle, .ingredient-heading h2 { font-family: 'Playfair Display', serif; }
+.chapter h2, .detail-body h2, #editorTitle, .ingredient-heading h2 { font-family: 'Prompt', sans-serif; }
 .chapter h2 { font-size: 23px; margin: 0 0 13px; }
 .recipe-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 13px; }
 .recipe-card { border: 1px solid var(--line); background: white; padding: 0; border-radius: 13px; text-align: left; overflow: hidden; color: var(--plum); }
@@ -38,7 +38,7 @@ button { cursor: pointer; }
 .popup { position: absolute; z-index: 3; right: 12px; top: 61px; background: white; border-radius: 10px; box-shadow: 0 8px 28px #35184e30; overflow: hidden; }
 .popup button { display: block; width: 160px; padding: 14px; border: 0; background: white; text-align: left; }
 .popup .danger { color: #d32764; }
-.detail-body h1 { font: 700 32px 'Playfair Display', serif; margin: 8px 0 24px; }
+.detail-body h1 { font: 700 32px 'Prompt', sans-serif ; margin: 8px 0 24px; }
 .eyebrow { margin-top: 22px; color: var(--pink); font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
 .ingredient-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; }
 .ingredient-heading h2 { font-size: 21px; margin: 10px 0; }
